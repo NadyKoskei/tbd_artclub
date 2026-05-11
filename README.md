@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TBD Art Club
 
-## Getting Started
+A simple marketing landing page for TBD Art Club — a Kenyan creative community that connects artists, runs monthly meetups, and offers mural, commission, and teaching services.
 
-First, run the development server:
+Built with Next.js 16.2.6, React 19.2.4, TypeScript, and Tailwind CSS 4.
+
+## Features
+
+- Responsive single-page layout with smooth in-page navigation
+- Hero section with full-width background image
+- Membership and mission sections
+- Horizontal image carousel for past meetups
+- Mobile-friendly header with collapsible navigation
+- Static image optimization using `next/image`
+
+## Project structure
+
+- `app/page.tsx` — main landing page and content layout
+- `app/layout.tsx` — root app layout, metadata, and font setup
+- `app/components/SiteHeader.tsx` — responsive navigation header
+- `app/components/GalleryCarousel.tsx` — interactive carousel for event photos
+- `app/globals.css` — global Tailwind + base styles
+- `public/images` — static assets used by the site
+
+## Scripts
+
+Install dependencies and run the project locally.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Available scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev    # start local development server
+npm run build  # build production assets
+npm run start  # start the production server
+npm run lint   # run ESLint checks
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stack
 
-## Learn More
+- Next.js 16.2.6
+- React 19.2.4
+- Tailwind CSS 4
+- TypeScript
+- ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Development notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The app uses the `app` directory and Next.js App Router.
+- Fonts are loaded through `next/font/google`.
+- The carousel uses a client component for scroll interaction.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you want to update the page or add more content, start by editing `app/page.tsx` and the header/carousel components in `app/components/`.
