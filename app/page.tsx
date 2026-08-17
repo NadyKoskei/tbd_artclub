@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GalleryCarousel } from "./components/GalleryCarousel";
+import { MembershipSection } from "./components/MembershipSection";
 import { SiteHeader } from "./components/SiteHeader";
 
 const pastMeetupImages = [
@@ -34,22 +35,6 @@ const whatWeDoOfferings = [
     description:
       "Textile arts, hand embroidery, and craft-led sessions that blend tradition with contemporary practice.",
   },
-];
-
-const exclusiveMembershipBenefits = [
-  "Exclusive meetups",
-  "Monthly check-ins and accountability",
-  "Priority consideration for opportunities such as exhibitions and events",
-  "Featured on the website front page",
-  "Featured on the IG page and promotional videos for their work",
-];
-
-const generalMembershipBenefits = [
-  "Group chat",
-  "Meetups",
-  "Events",
-  "Artistic growth",
-  "Access to opportunities",
 ];
 
 const CONTACT_EMAIL = "tbdartcub@gmail.com";
@@ -151,38 +136,7 @@ export default function Home() {
           </article>
         </section>
 
-        <section id="membership" className="scroll-mt-20 space-y-5 sm:scroll-mt-24 sm:space-y-6">
-          <h2 className="text-2xl font-semibold text-[#4c3225] sm:text-3xl">
-            Membership Benefits
-          </h2>
-          <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
-            <article className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-[#e5d2bf] sm:rounded-3xl sm:p-8">
-              <h3 className="text-xl font-semibold text-[#4c3225]">
-                Exclusive Membership
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm leading-7 text-[#5f4537] md:text-base">
-                {exclusiveMembershipBenefits.map((benefit) => (
-                  <li key={benefit} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8f5d42]" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-
-            <article className="rounded-2xl bg-[#5b3a29] p-5 text-[#fffaf4] shadow-sm sm:rounded-3xl sm:p-8">
-              <h3 className="text-xl font-semibold">General Membership</h3>
-              <ul className="mt-4 space-y-3 text-sm leading-7 text-[#f8e7d7] md:text-base">
-                {generalMembershipBenefits.map((benefit) => (
-                  <li key={benefit} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#f1c9a8]" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
-        </section>
+        <MembershipSection />
 
         <section id="meetups" className="scroll-mt-20 space-y-5 sm:scroll-mt-24 sm:space-y-6">
           <h2 className="text-2xl font-semibold text-[#4c3225] sm:text-3xl">
