@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FAQSection } from "./components/FAQSection";
 import { GalleryCarousel } from "./components/GalleryCarousel";
 import { MembershipSection } from "./components/MembershipSection";
 import { SiteHeader } from "./components/SiteHeader";
@@ -50,6 +51,7 @@ const navigationLinks = [
   { label: "Membership", href: "#membership" },
   { label: "Past events", href: "#meetups" },
   { label: "What we do", href: "#what-we-do" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Home() {
@@ -197,6 +199,8 @@ export default function Home() {
             ))}
           </ul>
         </section>
+
+        <FAQSection />
       </div>
 
       <footer className="border-t border-[#d8c1ab] bg-[#4a3023] pb-[max(0.5rem,env(safe-area-inset-bottom))] text-[#f8eadb]">
